@@ -9,18 +9,23 @@
 </head>
 <body>
 <header>
-        
-        <div class="page-title">
-        <h1>BEST FEEDER</h1>
-        </div>
-            <div id="user-info" class="user-info">
-                  
+            <a href="../main-page/index-main.php">    
+                <i class="fas fa-home fa-2x" id="menu-icon"></i>
+            </a>
+            <div class="page-title">
+                <h1>CRAZY MOTHERFUCKER</h1>
             </div>
-     
-            <span class="login-button" id="loginButton">Fazer Login/Cadastro</span>
-      
-
-    </header>
+            <div id="user-info" class="user-info">
+                <?php
+                if (isset($_SESSION['username'])) {
+                    $username = $_SESSION['username'];
+                    echo "Bem-vindo, $username!";
+                } else {
+                    echo '<span class="login-button" id="loginButton"><a href="../login/index.php">Login</a>/<a href="../cadastro/index.php">Cadastro</a></span>';
+                }
+                ?>
+            </div>
+        </header>  
     
     
     </div>

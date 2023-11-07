@@ -487,6 +487,7 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 32px;
   }
   
   .form-container input[type="email"],
